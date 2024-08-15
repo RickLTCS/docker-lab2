@@ -4,6 +4,8 @@ RUN apk add --no-cache tini
 
 ENTRYPOINT ["/sbin/tini", "--"]
 
+RUN apk add --no-cache fortune
+
 RUN mkdir -p /app
 WORKDIR /app
 
