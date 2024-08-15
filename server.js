@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
     child_process.exec('fortune', (error, message) => {
         if (error === null) {
             const currentDateTime = new Date().toString();
-            const responseMessage = 'Date and Time: ' + currentDateTime + '\nFortune:' + message;
+            const responseMessage = "Date and Time: \n" + currentDateTime + "Fortune: " + message;
             res.send(responseMessage);
         } else {
             res.send('Error: ' + error);
